@@ -33,6 +33,6 @@ export class CartApiService {
   }
 
   deleteProductFromCart(cartRequest: object) {
-    return this.http.delete("http://localhost:8080/api/v1/cart/delete", {body: cartRequest, headers: this.getHeaders()})
+    return this.http.post("http://localhost:8080/api/v1/cart/delete", cartRequest, {headers: this.getHeaders()})
   }
 }

@@ -41,7 +41,7 @@ public class CartController {
 		webShopService.removeProductFromCart(cartRequest);
 	}
 
-	@DeleteMapping(value = API_DELETE_PRODUCT_FROM_CART)
+	@PostMapping(value = API_DELETE_PRODUCT_FROM_CART)
 	public void deleteProductFromCart(@RequestBody CartRequest cartRequest) {
 		webShopService.deleteProductFromCart(cartRequest);
 	}
