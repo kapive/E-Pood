@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
     <groupId>com.web.shop</groupId>
-    <artifactId>e-pood</artifactId>
+    <artifactId>e-pood-back-end</artifactId>
     <version>0.0.1</version>
-    <name>e-pood</name>
+    <name>e-pood-back-end</name>
     <description>E Pood for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
