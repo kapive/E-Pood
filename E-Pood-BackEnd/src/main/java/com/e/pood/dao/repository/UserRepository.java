@@ -1,0 +1,11 @@
+package com.e.pood.dao.repository;
+
+import com.e.pood.dao.domain.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.transaction.annotation.Transactional;
+
+@Transactional
+public interface UserRepository extends JpaRepository<User, Integer> {
+
+	User getUserByUsername(String username);
+}

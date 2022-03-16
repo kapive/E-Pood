@@ -1,0 +1,47 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet id="2" author="Katarina Riitmuru">
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="T-Shirt"/>
+            <column name="product_cost" value="19.99"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Dress"/>
+            <column name="product_cost" value="100"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Hat"/>
+            <column name="product_cost" value="7.49"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Jeans"/>
+            <column name="product_cost" value="59.99"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Sweater"/>
+            <column name="product_cost" value="69.99"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Jacket"/>
+            <column name="product_cost" value="149.99"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Boots"/>
+            <column name="product_cost" value="204.49"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Skirt"/>
+            <column name="product_cost" value="34.99"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Hand bag"/>
+            <column name="product_cost" value="89.99"/>
+        </insert>
+        <insert tableName="web_shop_product">
+            <column name="product_name" value="Shoes"/>
+            <column name="product_cost" value="54.99"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,56 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="1" author="Katarina Riitmuru">
+        <createTable tableName="web_shop_product">
+            <column name="product_id" type="INT(11)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="product_name" type="VARCHAR(32)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_cost" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="web_shop_cart">
+            <column name="id" type="INT(11)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="cart_id" type="INT(11)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_id" type="INT(11)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_quantity" type="INT(11)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="web_shop_order">
+            <column name="order_id" type="INT(11)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="cart_id" type="INT(11)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="order_status" type="VARCHAR(32)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="web_shop_user">
+            <column name="user_id" type="INT(11)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <include file="db/changelog/database-change-set-001.xml"/>
+</databaseChangeLog>
