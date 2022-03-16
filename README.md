@@ -29,5 +29,7 @@ cd E-Pood-Frontend/
 ```
 And then run it using the command:
 ```
+npm install --save-dev @angular-devkit/build-angular
+ng build
 ng serve
 ```
