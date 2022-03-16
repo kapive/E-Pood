@@ -11,6 +11,8 @@ export class LoginComponent{
     password: ''
   });
 
+  public error = '';
+
   constructor(private api: ApiService,
               private formBuilder: FormBuilder,
               public tokenStore: TokenStoreService,
@@ -18,10 +20,14 @@ export class LoginComponent{
 
   async onSubmit(): Promise<void> {
     await this.api
-      .singIn(this.loginForm.value.username, this.loginForm.value.password).toPromise().then(res => {
+      .singIn(this.loginForm.value.username, this.loginForm.value.password).toPromise()
+      .then(res => {
         this.tokenStore.setToken(res?.headers.get("Authorization"))
-    });
+      }).catch(error => {
+        this.error = 'Invalid username or password'
+      });
     if (this.tokenStore.getToken() !== null) {
+      this.error = '';
       this.router.navigate(['/products'])
     }
   }
