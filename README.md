@@ -23,6 +23,8 @@ Then run the BackEnd using the command:
 java -jar E-Pood-BackEnd/target/e-pood.jar
 ```
 
+Swagger will be available on http://localhost:8080/swagger-ui.html#http://localhost:8080/swagger-ui.html#
+
 For the run of FrontEnd part, move into E-Pood-Frontend:
 ```
 cd E-Pood-Frontend/
